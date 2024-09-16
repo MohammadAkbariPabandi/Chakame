@@ -1,0 +1,410 @@
+.aboutusHeader{
+    margin-block: 120px;
+}
+.aboutusHeader__subject{
+  align-items: center;
+}
+.aboutusHeader__subject p{
+    color: var(--Zodiac);
+    font-family: "Cera Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 12px;
+    margin-bottom: 0 !important;
+    height: 24px;
+}
+.aboutusHeader__subject p::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--Tory);
+}
+.aboutusHeader__titel{
+    margin-block: 8px;
+}
+.baboutusHeader__content{
+    border-left: 1px solid var(--Zodiac);
+    padding-left: 20px;
+}
+.aboutusCategory__Image{
+    height: 585px;
+    padding-inline: 0;
+}
+.aboutusCategory__Image img{
+    width: 100%;
+    height: 100%;
+}
+.aboutusCategory__Ditailes{
+    position: relative;
+}
+#aboutusCategory__Ditailes{
+  display: none;
+}
+.aboutusCategory__Ditailes_Card{
+    background-color: var(--Zodiac);
+    width: 506px;
+    height: 494px;
+    position: absolute;
+    bottom: 45.5px;
+    right: 0;
+    padding: 40px;
+}
+.aboutusCategory__Ditailes_Card_content h3{
+    color: var(--White);
+    font-family: "Cera Pro";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 12px;
+}
+.aboutusCategory__Ditailes_Card_content p{
+    color: var(--White);
+}
+.aboutusCategory_card{
+    border-left: 2px solid var(--White);
+    padding-left: 40px;
+}
+.meetThePeople__Card_Titel{
+  text-align: center;
+}
+.meetThePeople__Card_Content{
+  text-align: center;
+}
+.meetThePeople{
+    margin-top: 240px;
+    margin-bottom: 120px;
+}
+.meetThePeople__Cards{
+    margin-top: 80px;
+}
+.meetThePeople__Card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+.meetThePeople__Card img{
+    width: 256px;
+    height: 256.868px;
+    border-radius: 1000px;
+}
+.meetThePeople__Card p{
+    text-align: center;
+}
+.description{
+    height: 468px;
+    position: relative;
+}
+.description_Row{
+  height: 100%;
+}
+.description__content{
+    height: 100%;
+    padding-right :85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.description__content p{
+    color: var(--Midnight);
+    font-family: "Cera Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+}
+.description__Image{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#description__Image{
+  display: none;
+}
+.description__Image img{
+    width: 100%;
+    height: 100%;
+}
+.bio{
+    margin-block: 120px;
+}
+.bio__Title{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 100px;
+    padding-top: 73px;
+    border-right: 2px solid var(--Midnight);
+}
+.bio__Title_Pinteraround{
+    position: absolute;
+    right: -36px;
+    top: 132px;
+    width: 72px;
+    height: 72px;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bio__Title_Pinter{ 
+    width: 24px;
+    height: 24px;
+    background-color: var(--Maroon);
+}
+.bio__Title h2{
+    color: var(--Maroon);
+    font-family: "Cera Pro";
+    font-size: 160px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.bio__Title h3{
+    color: var(--Maroon);
+    font-family: "Cera Pro";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+.bio__content{
+    padding-top: 73px;
+    padding-left: 124px;
+
+}
+.bio__content img{
+    width: 611px;
+    height: 382px; 
+    margin-bottom: 32px;  
+}
+.bio__content p{
+    width: 611px;
+    
+}
+.bioSlider{
+  display: none;
+}
+.peopelComents{
+    margin-block: 120px;
+    padding-block: 120px;
+    background-color:  #EEF2FB;
+}
+.peopelComents__Slider{
+    margin-top: 60px;
+    height: 310px;
+
+}
+.peopelComents__Slider img{
+    width: 45px;
+    height: 38px;
+    flex-shrink: 0;
+}
+.peopelComents__Rightside{
+    background-color: var(--Zodiac);
+    padding: 77.985px 42px 77.485px 43px;
+}
+.peopelComents__Rightside_Card label{
+    color: var(--White);
+    font-family: "Cera Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal
+}
+.peopelComents__Rightside_Card img{
+    width: 80px;
+    height: 57.531px;
+}
+.peopelComents__Rightside_Card_chackBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+.peopelComents__Rightside_Card_chackBox input{
+    border-radius: 0 !important;
+    background-color: var(--Zodiac);
+}
+.peopelComents__Rightside_Card_Title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-inline: 60px;
+    margin-bottom: 40px;
+}
+.peopelComents__Rightside_Card_Title p{
+    color: var(--White);
+    text-align: center;
+    font-family: "Cera Pro";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+/* responsive AboutUS ------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  .aboutusHeader{
+    margin-block: 48px;
+  }
+  .aboutusHeader__subject{
+    font-size: 14px;
+  }
+  .aboutusHeader__subject p{
+    margin-right: 8px;
+    height: 16px;
+  }
+  .aboutusHeader__subject p::before{
+    width: 16px;
+    height: 16px;
+    margin-block: auto ;
+  }
+  .aboutusHeader__titel{
+    font-size: 28px;
+  }
+  .baboutusHeader__content{
+    font-size: 16px;
+  }
+  #aboutusCategory__Ditailes{
+    display: unset;
+    padding-inline: 30px;
+  }
+  .aboutusCategory__Ditailes{
+    display: none;
+  }
+  .aboutusCategory__Image{
+    height: 347px;
+  }
+  .aboutusCategory__Ditailes_Card{
+    width: auto;
+    height: auto;
+    position: unset;
+    padding: 40px 24px;
+    margin-top: -72px;
+  }
+  .aboutusCategory_card{
+    padding-left: 24px;
+  }
+  .aboutusCategory__Ditailes_Card_content h3{
+    font-size: 22px;
+  }
+  .aboutusCategory__Ditailes_Card_content p{
+    font-size: 14px;
+  }
+  .meetThePeople{
+    margin-top: 96px;
+    margin-bottom: 48px;
+    padding-inline: 30px;
+  }
+  .meetThePeople h2{
+    font-size: 28px;
+  }
+  .meetThePeople p{
+    font-size: 16px;
+  }
+  .meetThePeople__Cards{
+    margin-top: 32px;
+  }
+  .meetThePeople__Card{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 24px; 
+  }
+  .meetThePeople__Card img{
+    width: 96px;
+    height: 96px;
+    border-radius: 1000px;
+    margin-right: 24px;
+  }
+  .meetThePeople__Card_Titel{
+    text-align: start;
+  }
+  .meetThePeople__Card_Titel h5{
+    text-align: start;
+    margin-bottom: 0;
+  }
+  .meetThePeople__Card_Titel p{
+    text-align: start;
+    margin-bottom: 8px;
+  }
+  .meetThePeople__Card_Content{
+    text-align: start;
+  }
+  .meetThePeople__Card_Content p{
+    display: none;
+  }
+  .description{
+    margin-block: 40px;
+    padding-inline: 30px;
+    position: relative;
+    height: auto;
+  }
+  .description_Row{
+    height: auto;
+  }
+  .description__content{
+    height: 100%;
+    padding-inline :0;
+    display: block;
+  }
+  #description__Image{
+    display: block;
+    height: auto;
+    padding-inline: 0;
+    width: 354px;
+  }
+  #description__Image img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .description__Image{
+    display: none;
+  }
+  .description__Image img{
+    width: 100%;
+    height: 100%;
+  }
+  .bio{
+    display: none;
+  }
+  .bioSlider{
+    display: unset;
+  }
+  .peopelComents{
+    margin-block: 48px;
+    padding-block: 48px;
+    padding-inline: 30px;
+  }
+  .peopelComents__Leftside h2{
+    font-size: 28px;
+  }
+  .peopelComents__Slider{
+    height: 400px; 
+    margin-top: 32px;
+  }
+  .peopelComents_content{
+    padding-inline: 0;
+  }
+  .peopelComents__Rightside{
+    margin-top: 40px;
+  }
+  .peopelComents__Rightside_Card_Title{
+    padding-inline: 0;
+  }
+  .peopelComents__Rightside_Card_Title p{
+    font-size: 18px;
+  }
+  .peopelComents__Rightside_Card_chackBox label{
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,125 @@
+.dopHeader{
+    background-image: url(../images/Directory.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* height: 530px; */
+}
+
+.dopHeader__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--White);
+    padding: 120px;
+    height: inherit;
+}
+
+.dopHeader__content h1{
+  margin-bottom: 32px;
+}
+
+.dopHeader__pointer span{
+    width: 24px;
+    height: 24px;
+    background-color: var(--Maroon);
+    margin-right: 12px;
+}
+
+.dopsearch__form{
+    margin-inline: 120px;
+    margin-bottom: 120px;
+    margin-top: -68px;
+    background-color: var(--White);
+    padding: 40px;
+}
+
+.dopCard{
+    padding-bottom: 80px;
+}
+
+.dopCard__info{
+    margin-bottom: 32px;
+}
+
+.dopCard__info-body{
+    justify-content: space-between;
+}
+.dopCard__info-body img{
+    width: 126px;
+    height: 134px;
+    flex-shrink: 0;
+    border-radius: 134px;
+}
+
+.dopCard__info-buttons-mobile{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .dopHeader__content{
+        padding: 64px 18px 160px 18px;
+    }
+    .dopHeader__pointer{
+        margin-bottom: 16px;
+    }
+    .dopHeader__pointer span{
+        width: 16px;
+        height: 16px;
+    }
+    .dopHeader__pointer p{
+        font-size: 14px;
+        padding: 0;
+        margin: auto 0;
+        height: 16px;
+    }
+    .dopHeader__content h1{
+        font-size: 28px;
+    }
+    .dopHeader__content h3{
+        font-size: 22px;
+    }
+    .dopsearch{
+        padding-inline: 0;
+    }
+
+    .dopsearch__form{
+        margin-inline: 30px;
+        margin-bottom: 64px;
+        margin-top: -115px;
+        box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.15);
+    }
+    .dopsearch__form-item{
+        width: 100%;
+        margin-bottom: 32px;
+        padding-inline: 0;
+    }
+    .dopsearch__form-item select{
+        padding: 10px 20px;
+    }
+    .dopCards{
+        padding-inline: 30px;
+    }
+    .dopCard__info-body div:last-child{
+        padding-left: 32px;
+    }
+    .dopCard__info-buttons{
+        display: none;
+    }
+    .dopCard__info-buttons-mobile{
+        display: flex;
+        margin-top: 32px;
+        justify-content: space-between;
+    }
+    .dopCard__info-secondcolumn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dopCard__info-secondcolumn p{
+        margin: 0;
+    }
+}

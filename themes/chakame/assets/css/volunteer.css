@@ -1,0 +1,147 @@
+.volunteerHeader {
+    background-image: url(../images/Volunteer-header-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.volunteerHeader-content {
+    padding: 120px 100px 200px 100px;
+}
+
+.volunteerHeader-content div {
+    display: flex;
+    justify-content: center;
+}
+
+.volunteerHeader-content span {
+    width: 24px;
+    height: 24px;
+    background-color: var(--Maroon);
+    margin-right: 12px;
+}
+
+.volunteerHeader-content p {
+    margin: 0;
+    text-align: center;
+}
+
+.volunteerHeader-content h1 {
+    margin-block: 20px;
+    text-align: center;
+}
+
+.volunteerContent {
+    padding-inline: 190px;
+}
+
+.volunteerForm {
+    background-color: var(--White);
+    margin-top: -131px;
+    padding: 60px 120px;
+    box-shadow: 0px 16px 64px 0px rgba(19, 37, 84, 0.25);
+    margin-bottom: 86px;
+}
+
+.volunteerForm h3 {
+    margin-bottom: 24px;
+}
+
+.volunteerForm-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.volunteerForm label {
+    gap: 225px;
+}
+
+.volunteerForm input,
+.volunteerForm select {
+    border-radius: 4px;
+    background: rgba(22, 81, 165, 0.10);
+    border: var(--PastelBlue);
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.VolunteerUnlock {
+    background-color: var(--LightPastelBlue);
+    padding-block: 120px;
+}
+
+.VolunteerUnlock .unlock__card {
+    width: 607px;
+}
+/***********************Responsive***********************/
+@media only screen and (max-width: 600px) {
+ 
+    .volunteerHeader-content {
+        padding: 60px 30px;
+    }
+
+    .volunteerHeader-content div {
+        justify-content: start;
+    }
+
+    .volunteerHeader-content span {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
+    .volunteerHeader-content p {
+        font-size: 14px;
+        text-align: start;
+    }
+
+    .volunteerHeader-content h1 {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 28px;
+        text-align: start;
+    }
+
+    .volunteerContent {
+        padding-inline: 0;
+    }
+
+    .volunteerForm {
+        background-color: var(--White);
+        margin-top: 0;
+        padding: 30px;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+
+    .volunteerForm h3 {
+        font-size: 28px;
+    }
+
+    .volunteerForm-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .volunteerForm label {
+        gap: 225px;
+    }
+
+    .volunteerForm input,
+    .volunteerForm select {
+        border-radius: 4px;
+        background: rgba(22, 81, 165, 0.10);
+        border: var(--PastelBlue);
+        margin-top: 12px;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .VolunteerUnlock {
+        padding-block: 64px;
+    }
+
+}
