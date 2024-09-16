@@ -16,7 +16,7 @@ Template Name: Header Content
       <div class="collapse navbar-collapse " id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll blog-NavbarItems" style="--bs-scroll-height: 280px;">
           <li class="nav-item mx-lg-3 ">
-              <a class="nav-link dropdown-toggle issuesPopup" href="#" role="button">hi</a>
+              <a class="nav-link dropdown-toggle issuesPopup" href="#" role="button">hi chakame</a>
           </li>
           <li class="nav-item mx-lg-3">
               <a class="nav-link dropdown-toggle resourcesPopup"  href="#" role="button">test</a>
