@@ -1,138 +1,17 @@
 
 .navbar{
-    height: 107px;
+    height: 60px;
+
 }
-
-.resourcesPopup 
-, .issuesPopup{
-    /* position: relative; */
-    display: inline-block;
-    cursor: pointer;
+.collapse{
+    justify-content: center;
 }
-
-.resourcesPopup__content 
-,.issuesPopup__content{
-    visibility: hidden;
-    background-color: #555;
-    padding: 32px 0 64px 0;
-    position: absolute;
-    z-index: 1;
-    top: 107px;
-    left: 0;
-    background: var(--White);
-    box-shadow: inset 0px 8px 64px 0px rgba(0, 0, 0, 0.25);
+.navbar-nav{
+    display: contents;
 }
-
-.resourcesPopup__content-body 
-, .issuesPopup__content-body{
-    padding-inline: 0;
-}
-
-
-.resourcesPopup__content-firstColumn h4
-,.issuesPopup__content-firstColumn h4{
-    margin-bottom: 48px;
-}
-
-.resourcesPopup__content-link 
-,.issuesPopup__content-link{
-    margin-bottom: 28px;
-    padding-block: 20px;
-    padding-inline: 16px;
-}
-
-.resourcesPopup__content-link:hover 
-,.issuesPopup__content-link:hover{
-    background-color: var(--LightPastelBlue);
-}
-
-.resourcesPopup__content-secondColumn 
-,.issuesPopup__content-secondColumn{
-    padding-top: 20px;
-    padding-left: 106px;
-}
-
-
-
-.resourcesPopup__content-ForInvestors .row>div
-,.issuesPopup__content-ForInvestors .row>div{
-    padding-right: 125px;
-}
-
-
-.resourcesPopup__content-Dop{
-    padding-left: 120px;
-    padding-right: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.issuesPopup__content-Dop
-,.issuesPopup__content-ForDevelopers
-,.issuesPopup__content-ForInvestors{
-    /* padding-left: 120px; */
-    /* padding-right: 160px; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-.issuesPopup__content-Dop .smallVerticalCards__card_title
-,.issuesPopup__content-ForDevelopers .smallVerticalCards__card_title
-,.issuesPopup__content-ForInvestors .smallVerticalCards__card_title{
-    height: unset;
-    max-height: 58px;
-}
-
-.issuesPopup__content-Dop .smallVerticalCards__card_Summary
-,.issuesPopup__content-ForDevelopers .smallVerticalCards__card_Summary
-,.issuesPopup__content-ForInvestors .smallVerticalCards__card_Summary{
-    max-height: 72px;
-    height: unset;
-    margin-top: 8px;
-    margin-bottom: 16px;
-}
-
-
- 
-
-
-.resourcesPopup__content-Dop-images
-,.issuesPopup__content-Dop-images{
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    margin-bottom: 24px;
-}
-.issuesPopup__content-heroImage{
-    height: 180px;
-}
-.resourcesPopup__content-Dop-images img
-,.issuesPopup__content-Dop-images img{
-    width: 64px !important;
-    height: 64px !important;
-    border-radius: 64px;
-}
-
-
-.showPopup {
-    visibility: visible;
-    -webkit-animation: fadeIn 0.3s;
-    animation: fadeIn 0.3s
-}
-
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-  
-
-@keyframes fadeIn {
-   from {opacity: 0;}
-   to {opacity:1 ;}
+.nav-link{
+    font-size: larger;
+    font-weight: bold;
 }
 
 
@@ -149,38 +28,6 @@
     .navbar-nav .dropdown-menu{
       width: 300px;
     }
-    .resourcesPopup__content{
-        padding-inline: 30px;
-        top: 450px;
-        box-shadow: 0px 8px 64px 0px rgba(0, 0, 0, 1);
-        
-    }
-    .resourcesPopup__content-secondColumn {
-        padding-inline: 30px;
-    }
-
-    .js-Dop{
-        border-bottom: 1px solid var(--PastelBlue);
-    }
-    .resourcesPopup__content-ForInvestors a{
-        font-size: 12px !important;
-    }
-
-    .resourcesPopup__content-ForDevelopers .smallVerticalCards__card{
-        width: 100% !important;
-        margin-bottom: 10px;
-    }
-    .resourcesPopup__content-Dop-images {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .resourcesPopup__content-Dop{
-        padding-inline: 0;
-    }
-    .resourcesPopup__content-Dop h4{
-        text-align: center;
-    }
-
 }
   
   

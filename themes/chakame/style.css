@@ -10,6 +10,15 @@ src: url(./fonts/Cera-Pro-Medium.woff);
   font-weight: bold;
 }
 
+@font-face {
+  font-family: vazir;
+  src: url(./fonts/Vazir.woff);
+}
+@font-face {
+  font-family: vazir;
+  src: url(./fonts/Vazir.woff2);
+}
+
 :root {
   --Midnight: #111111;
   --Merlot: #7F1F36;

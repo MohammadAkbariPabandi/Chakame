@@ -1,8 +1,20 @@
 /* Home Page */
 
 .homeheader{
+  background-image: url(../images/SiteTitleImage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
   height: 100vh;
+  z-index: -1;
 
+}
+
+.homeheader__body{
+ display: flex;
 }
 
 .homeheader__video{
@@ -10,11 +22,253 @@
   padding-inline: 40px;
 }
 
-.homeheader__video{
+.homeheader__video video{
   height: 100%;
   width: 100%;
 }
 
 .homeheader__content{
-  
+
+}
+
+
+.flex-slide_card_category{
+  color: var(--global-color-black);
+  font-family: vazir;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 5.6px;
+}
+
+.collection{
+  /* position: relative; */
+  overflow: hidden;
+  height : 30vh;
+}
+
+.flex-slide_cardDetail{
+  padding-left: 60px;
+  margin-block: 59px;
+  height: 30%;
+}
+
+
+.flex-slide_card_content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.flex-slide_card_content_title{
+ color : var(--global-color-purple);
+  font-family: vazir;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.flex-slide_card_content strong{
+  margin-left: 72px;
+  margin-bottom: 0;
+  text-wrap: nowrap;
+}
+
+.flex-slide_card_content p{
+  margin-bottom: 0;
+}
+
+/*  -----------------------------------------------start => collection-flwx-card-slide-Desktop ------------------------------------------------------ */
+
+.flex-container {
+  height: 70vh;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+}
+
+/* .js-selected-flex-slid{
+  -webkit-flex: 3 !important;
+  -ms-flex: 3 !important;
+  flex: 3 !important;
+  margin-left : -110px !important;
+} */
+
+/* .js-selected-flex-slid h4{
+  color: var(--global-color-white) !important; 
+}
+
+.js-selected-flex-slid .flex-title{
+   background-color : var(--global-color-purple) !important;
+} 
+
+.js-selected-flex-slid .js-selected-flex-slid-text{
+   margin-top: 160px !important;
+}
+.js-selected-flex-slid .js-selected-flex-slid-header{
+   color : var(--global-color-white) !important;
+} */
+
+.flex-slide {
+  position: relative;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  /* -webkit-transition: all 900ms ease;
+  -moz-transition: all 900ms ease;
+  -ms-transition: all 900ms ease;
+  -o-transition: all 900ms ease;
+  transition: all 900ms ease; */
+  animation-name: flex-slide-growBack;
+  animation-duration: 1s;
+  animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: forwards;
+}
+
+.flex-title {
+  color : var(--global-color-lightBrown);
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%; */
+  animation-name: changeWidthtBack;
+  animation-duration: 0.5s;
+  animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: forwards;
+  height: 100%;
+  /* display: flex;
+  align-items: center; */
+  border-radius: 0 90px 90px 0;
+  /* border-left: none; */
+  box-shadow: 20px 0px 39px -32px rgba(0, 0, 0, 0.45);
+  justify-content: center;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.flex-title h4{
+  color: var(--global-color-lightBrown);
+  font-family: vazir;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transform: rotate(-90deg);
+  width: 55vh;
+  text-align: center;
+}
+
+/* .FlexSlideChangeColor{
+  animation-name: FlexSlideChangeColor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: forwards;
+} */
+
+.flex-slide img{
+  height: 100%;
+  width: 100%;
+  border-radius: 0 95px 95px 0;
+  padding-inline: 2px;
+}
+
+/* hover behavior */
+
+.flex-slide:hover {
+  animation-name: flex-slide-grow;
+  animation-duration: 1s;
+  animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: forwards;
+}
+
+.flex-slide:hover  .flex-title{
+  animation-name: changeWidth ;
+  animation-duration: 1s;
+  animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: forwards;
+}
+
+/* .flex-slide:hover  .flex-title h4{
+  animation-name: change-brownColor ;
+  animation-duration: 1s;
+  animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: forwards;
+} */
+
+/* .flex-slide:has(+ .flex-slide:hover){
+  animation-name: change-backgroundColor ;
+  animation-duration: 1s;
+  animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: forwards;
+} */
+
+/* @keyframes FlexSlideChangeColor {
+  12% {
+    background-color: var(--global-color-white);
+  }
+  100% {
+    background-color: var(--global-color-purple);
+  }
+} */
+
+/*  -----------------------------------------------End => collection-flwx-card-slide-Desktop ------------------------------------------------------ */
+
+
+/* keyframes  */
+@keyframes changeheightBack {
+  from { height: 100%;}
+  to { height: 100%;}
+}
+
+@keyframes changeheight {
+  from { height: 100%; }
+  to { height: 15%;}
+}
+
+@keyframes flex-slide-grow {
+  from { flex-grow :1; }
+  to { flex-grow :2;}
+}
+@keyframes flex-slide-growBack {
+  from { flex-grow :2;}
+  to { flex-grow :1;}
+}
+
+@keyframes change-backgroundColor{
+  from { background-color : var(--global-color-white); !important }
+  to { background-color : var(--global-color-purple); !important }
+}
+@keyframes change-backgroundColorBack{
+  from { background-color : var(--global-color-purple); !important }
+  to { background-color : var(--global-color-white); !important }
+}
+
+@keyframes change-Color{
+  from { color :  var(--global-color-black) !important; }
+  to { color :  var(--global-color-white) !important; }
+}
+
+@keyframes change-brownColorBack{
+  from { color : var(--global-color-white) !important;  }
+  to { color :  var(--global-color-lightBrown) !important;  }
+}
+@keyframes change-brownColor{
+  from {color : var(--global-color-lightBrown) !important; }
+  to { color :  var(--global-color-white) !important; }
+}
+
+@keyframes changeWidth {
+  from { width: 100%;}
+  to { width: 20%;}
+}
+
+@keyframes changeWidthtBack {
+  from { width: 20%;}
+  to { width: 100%;}
 }
