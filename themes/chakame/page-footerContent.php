@@ -7,6 +7,6 @@ Template Name: Footer Content
 
 
 
-<footer calss="container-fluid">
+<footer calss="container-fluid footer">
             
 </footer>

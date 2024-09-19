@@ -1,26 +1,17 @@
 /* variable ---------------------------------------------------------------------------- */
-@font-face { 
-font-family: Cera Pro;
-src: url(./fonts/Cera-Pro-Medium.woff);
-}
 
 @font-face {
-  font-family: Cera Pro;
-  src: url(./fonts/Cera-Pro-Bold.woff);
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: vazir;
+  font-family: chimo;
   src: url(./fonts/Vazir.woff);
 }
 @font-face {
-  font-family: vazir;
+  font-family: chimo;
   src: url(./fonts/Vazir.woff2);
 }
 
 :root {
   --Midnight: #111111;
+  --chimo: #2a7a5b;
   --Merlot: #7F1F36;
   --Maroon: #B73750;
   --Zodiac: #132554;
@@ -205,7 +196,7 @@ src: url(./fonts/Cera-Pro-Medium.woff);
 
 /* Title ------------------------------------------------------------------------------------- */
 h1{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
@@ -213,7 +204,7 @@ h1{
   color: var(--Zodiac);
 }
 h2{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -221,7 +212,7 @@ h2{
   color: #132554;
 }
 h3{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -229,7 +220,7 @@ h3{
   color: var(--Zodiac);
 }
 h4{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
@@ -237,7 +228,7 @@ h4{
   color: var(--Zodiac);
 }
 h5{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -245,7 +236,7 @@ h5{
   color: var(--Zodiac);
 }
 h6{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -253,7 +244,7 @@ h6{
   color: var(--Zodiac);
 }
 .body-large{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -261,7 +252,7 @@ h6{
   color: var(--Midnight);
 }
 .body-base{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -269,7 +260,7 @@ h6{
   color: var(--Midnight);
 }
 .body-small{
-  font-family: "Cera Pro";
+  font-family: "chimo";
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -281,7 +272,59 @@ h6{
     border-bottom: #D6DADC 1px solid;
 }
 
+/* card  ----------------------------------------------------------------------------- */
+.horizontalCard{
+  display: flex;
+  align-items: center;
+  /* width: 350px;
+  height: 89px; */
+  margin: 35px 0;
+}
+.horizontalCard__image{
+  height: 260px;
+  width: 330px;
+  margin-left: 30px;
+}
 
+.horizontalCard__image img{
+  margin-left: 16px;
+  /* width: 110px;
+  min-width: 110px; */
+  height: 100%;
+  width: 100%;
+  align-self: stretch; 
+  border-radius: 10%;
+}
+
+.horizontalCard__content{
+  padding-block: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}   
+.horizontalCard__content_text{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* margin: auto; */
+  height: 60px;
+  overflow: hidden;
+}
+.horizontalCard__content_link{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-top: 8PX;
+}
+
+.horizontalCard__content_link svg{
+  rotate: 180deg;
+  margin-left: 8px;
+  margin-bottom: 0 !important;
+}
 
 /* responsive ------------ */
 

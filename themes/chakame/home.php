@@ -27,7 +27,7 @@
              <img src = "<?php echo get_template_directory_uri().'/assets/images/1.jpg';?>">
         </div>
         <div class="flex-slide js-collections-drawer-flex-slide" style="z-index: 2;">
-          <div class="flex-title js-collections-drawer-flex-title"><h4>تکچر</h4></div>
+          <div class="flex-title js-collections-drawer-flex-title"><h4>تکسچر</h4></div>
           <img src = "<?php echo get_template_directory_uri().'/assets/images/2.jpg';?>">
         </div>
         <div class="flex-slide js-collections-drawer-flex-slide" style="z-index: 3;">
@@ -50,7 +50,69 @@
     </div>
 </section>
 
+<section class="container-fluid homeprojects">
+      <div class="container homeprojects__title">
+          <h4>پروژه ها</h4>
+      </div>
+      <div class="photo__gallery">
 
+          <div class="column">
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/6.jpg';?>">
+                <h5>سلام</h5>
+              </div>
+            </div>
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/g2.jpg';?>">
+              </div>
+            </div>
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/1.jpg';?>">
+              </div>
+            </div>
+          </div>  
+           
+          <div class="column">
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/g1.jpg';?>">
+              </div>
+            </div>
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/6.jpg';?>">
+              </div>
+            </div>
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/g3.jpg';?>">
+              </div>
+            </div>
+          </div>  
+
+          <div class="column">
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/2.jpg';?>">
+              </div>
+            </div>
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/5.jpg';?>">
+              </div>
+            </div>
+            <div class="photo">
+              <div class="photo__content">
+                <img src = "<?php echo get_template_directory_uri().'/assets/images/2.jpg';?>">
+              </div>
+            </div>
+          </div>  
+
+      </div>
+</section>
 
 
 
