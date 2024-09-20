@@ -22,7 +22,39 @@
     </div>
 
     <div class="flex-container" >
-        <div class="flex-slide js-collections-drawer-flex-slide " style="z-index: 1;">
+        <?php
+        // Include WordPress core files
+        require_once ('wp-load.php');
+
+        // Get all published posts
+        $posts = get_posts(
+            array(
+                'post_type' => 'resource', // Change to 'page' if you want pages instead
+                'post_status' => 'publish',
+                'post_parent' => 0, // This ensures only parent posts are retrieved
+                'numberposts' => -1, // Retrieve 2 posts
+            )
+        );
+
+        if ($posts) {
+            foreach ($posts as $recentPost) {
+                $hero = get_field('hero', $recentPost->ID);
+                
+                  echo '<div class="flex-slide js-collections-drawer-flex-slide " style="z-index: 1;">';
+                  if($recentPost->post_title) {
+                    echo '<div class="flex-title js-collections-drawer-flex-title"><h4>' . esc_html($recentPost->post_title) .'</h4></div>';
+                  }
+                  if($hero) {
+                    echo '<a class="text-decoration-none " href="'. get_permalink($recentPost).'">';
+                       echo '<img src="' . $hero['url'] . '">';
+                    echo '</a>';
+                  }
+                  echo '</div>';
+            } 
+        } 
+        ?>
+
+        <!-- <div class="flex-slide js-collections-drawer-flex-slide " style="z-index: 1;">
            <div class="flex-title js-collections-drawer-flex-title"><h4>میکروسمنت</h4></div>
              <img src = "<?php echo get_template_directory_uri().'/assets/images/1.jpg';?>">
         </div>
@@ -46,7 +78,7 @@
           <div class="flex-title js-collections-drawer-flex-title"><h4>سایر</h4></div>
           <img src = "<?php echo get_template_directory_uri().'/assets/images/6.jpg';?>">
 
-        </div> 
+        </div>  -->
     </div>
 </section>
 
