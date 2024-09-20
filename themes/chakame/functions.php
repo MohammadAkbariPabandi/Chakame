@@ -150,20 +150,20 @@ function aiia_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
     
-    if (is_singular('blog')) {
-        wp_enqueue_style('blog-style', get_template_directory_uri() . '/assets/css/blog.css');
-    }
+    // if (is_singular('blog')) {
+    //     wp_enqueue_style('blog-style', get_template_directory_uri() . '/assets/css/blog.css');
+    // }
     if (is_singular('resource')) {
         wp_enqueue_style('resource-style', get_template_directory_uri() . '/assets/css/resource.css');
     }
-    if (is_singular('issue')) {
-        wp_enqueue_style('issue-style', get_template_directory_uri() . '/assets/css/issue.css');
-        wp_enqueue_script( 'aiia-issue', get_template_directory_uri() . '/js/issue.js', array(), AIIA_VERSION, true );
-    }
+    // if (is_singular('issue')) {
+    //     wp_enqueue_style('issue-style', get_template_directory_uri() . '/assets/css/issue.css');
+    //     wp_enqueue_script( 'aiia-issue', get_template_directory_uri() . '/js/issue.js', array(), AIIA_VERSION, true );
+    // }
 
-    if (is_page_template('page-blogs.php')) {
-        wp_enqueue_style('blogs-style', get_template_directory_uri() . '/assets/css/blogs.css');
-    }
+    // if (is_page_template('page-blogs.php')) {
+    //     wp_enqueue_style('blogs-style', get_template_directory_uri() . '/assets/css/blogs.css');
+    // }
 
     if (is_page_template('page-aboutus.php')) {
         wp_enqueue_style('aboutus-style', get_template_directory_uri() . '/assets/css/about-us.css');
@@ -175,18 +175,18 @@ function aiia_scripts() {
     if (is_page_template('page-contactus.php')) {
         wp_enqueue_style('contact-us-style', get_template_directory_uri() . '/assets/css/contact-us.css');
     }
-    if (is_page_template('page-volunteer.php')) {
-        wp_enqueue_style('volunteer-style', get_template_directory_uri() . '/assets/css/volunteer.css');
-    }
-    if (is_page_template('page-becomeAMember.php')) {
-        wp_enqueue_style('becomeAmember-style', get_template_directory_uri() . '/assets/css/bcome-a-member.css');
-    }
-    if (is_page_template('page-financialContribution.php')) {
-        wp_enqueue_style('financialContribution-style', get_template_directory_uri() . '/assets/css/financialContribution.css');
-    }
-    if (is_page_template('page-directoryOfProfessionals.php')) {
-        wp_enqueue_style('directoryOfProfessionals-style', get_template_directory_uri() . '/assets/css/directory-of-professionals.css');
-    }
+    // if (is_page_template('page-volunteer.php')) {
+    //     wp_enqueue_style('volunteer-style', get_template_directory_uri() . '/assets/css/volunteer.css');
+    // }
+    // if (is_page_template('page-becomeAMember.php')) {
+    //     wp_enqueue_style('becomeAmember-style', get_template_directory_uri() . '/assets/css/bcome-a-member.css');
+    // }
+    // if (is_page_template('page-financialContribution.php')) {
+    //     wp_enqueue_style('financialContribution-style', get_template_directory_uri() . '/assets/css/financialContribution.css');
+    // }
+    // if (is_page_template('page-directoryOfProfessionals.php')) {
+    //     wp_enqueue_style('directoryOfProfessionals-style', get_template_directory_uri() . '/assets/css/directory-of-professionals.css');
+    // }
     
     
 }
@@ -229,116 +229,116 @@ add_action('init', 'add_categories_to_pages');
 
 
 // Register Custom Post Type for Issues
-function custom_post_type_issues() {
+// function custom_post_type_issues() {
 
-    $labels = array(
-        'name'                  => _x( 'Issues', 'Post Type General Name', 'text_domain' ),
-        'singular_name'         => _x( 'Issue', 'Post Type Singular Name', 'text_domain' ),
-        'menu_name'             => __( 'Issues', 'text_domain' ),
-        'name_admin_bar'        => __( 'Issue', 'text_domain' ),
-        'archives'              => __( 'Issue Archives', 'text_domain' ),
-        'attributes'            => __( 'Issue Attributes', 'text_domain' ),
-        'parent_item_colon'     => __( 'Parent Issue:', 'text_domain' ),
-        'all_items'             => __( 'All Issues', 'text_domain' ),
-        'add_new_item'          => __( 'Add New Issue', 'text_domain' ),
-        'add_new'               => __( 'Add New', 'text_domain' ),
-        'new_item'              => __( 'New Issue', 'text_domain' ),
-        'edit_item'             => __( 'Edit Issue', 'text_domain' ),
-        'update_item'           => __( 'Update Issue', 'text_domain' ),
-        'view_item'             => __( 'View Issue', 'text_domain' ),
-        'view_items'            => __( 'View Issues', 'text_domain' ),
-        'search_items'          => __( 'Search Issue', 'text_domain' ),
-        'not_found'             => __( 'Not found', 'text_domain' ),
-        'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-        'featured_image'        => __( 'Featured Image', 'text_domain' ),
-        'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-        'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-        'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-        'insert_into_item'      => __( 'Insert into issue', 'text_domain' ),
-        'uploaded_to_this_item' => __( 'Uploaded to this issue', 'text_domain' ),
-        'items_list'            => __( 'Issues list', 'text_domain' ),
-        'items_list_navigation' => __( 'Issues list navigation', 'text_domain' ),
-        'filter_items_list'     => __( 'Filter issues list', 'text_domain' ),
-    );
-    $args = array(
-        'label'                 => __( 'Issue', 'text_domain' ),
-        'description'           => __( 'Post Type for Issues', 'text_domain' ),
-        'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ,'page-attributes' ),
-        'taxonomies'            => array( 'category', 'post_tag' ),
-        'hierarchical'          => true,
-        'public'                => true,
-        'show_ui'               => true,
-        'show_in_menu'          => true,
-        'menu_position'         => 5,
-        'show_in_admin_bar'     => true,
-        'show_in_nav_menus'     => true,
-        'can_export'            => true,
-        'has_archive'           => true,
-        'exclude_from_search'   => false,
-        'publicly_queryable'    => true,
-        'capability_type'       => 'post',
-    );
-    register_post_type( 'issue', $args );
+//     $labels = array(
+//         'name'                  => _x( 'Issues', 'Post Type General Name', 'text_domain' ),
+//         'singular_name'         => _x( 'Issue', 'Post Type Singular Name', 'text_domain' ),
+//         'menu_name'             => __( 'Issues', 'text_domain' ),
+//         'name_admin_bar'        => __( 'Issue', 'text_domain' ),
+//         'archives'              => __( 'Issue Archives', 'text_domain' ),
+//         'attributes'            => __( 'Issue Attributes', 'text_domain' ),
+//         'parent_item_colon'     => __( 'Parent Issue:', 'text_domain' ),
+//         'all_items'             => __( 'All Issues', 'text_domain' ),
+//         'add_new_item'          => __( 'Add New Issue', 'text_domain' ),
+//         'add_new'               => __( 'Add New', 'text_domain' ),
+//         'new_item'              => __( 'New Issue', 'text_domain' ),
+//         'edit_item'             => __( 'Edit Issue', 'text_domain' ),
+//         'update_item'           => __( 'Update Issue', 'text_domain' ),
+//         'view_item'             => __( 'View Issue', 'text_domain' ),
+//         'view_items'            => __( 'View Issues', 'text_domain' ),
+//         'search_items'          => __( 'Search Issue', 'text_domain' ),
+//         'not_found'             => __( 'Not found', 'text_domain' ),
+//         'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+//         'featured_image'        => __( 'Featured Image', 'text_domain' ),
+//         'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+//         'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+//         'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+//         'insert_into_item'      => __( 'Insert into issue', 'text_domain' ),
+//         'uploaded_to_this_item' => __( 'Uploaded to this issue', 'text_domain' ),
+//         'items_list'            => __( 'Issues list', 'text_domain' ),
+//         'items_list_navigation' => __( 'Issues list navigation', 'text_domain' ),
+//         'filter_items_list'     => __( 'Filter issues list', 'text_domain' ),
+//     );
+//     $args = array(
+//         'label'                 => __( 'Issue', 'text_domain' ),
+//         'description'           => __( 'Post Type for Issues', 'text_domain' ),
+//         'labels'                => $labels,
+//         'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ,'page-attributes' ),
+//         'taxonomies'            => array( 'category', 'post_tag' ),
+//         'hierarchical'          => true,
+//         'public'                => true,
+//         'show_ui'               => true,
+//         'show_in_menu'          => true,
+//         'menu_position'         => 5,
+//         'show_in_admin_bar'     => true,
+//         'show_in_nav_menus'     => true,
+//         'can_export'            => true,
+//         'has_archive'           => true,
+//         'exclude_from_search'   => false,
+//         'publicly_queryable'    => true,
+//         'capability_type'       => 'post',
+//     );
+//     register_post_type( 'issue', $args );
 
-}
-add_action( 'init', 'custom_post_type_issues', 0 );
+// }
+// add_action( 'init', 'custom_post_type_issues', 0 );
 
 // Register Custom Post Type for Blogs
-function custom_post_type_blogs() {
+// function custom_post_type_blogs() {
 
-    $labels = array(
-        'name'                  => _x( 'Blogs', 'Post Type General Name', 'text_domain' ),
-        'singular_name'         => _x( 'Blog', 'Post Type Singular Name', 'text_domain' ),
-        'menu_name'             => __( 'Blogs', 'text_domain' ),
-        'name_admin_bar'        => __( 'Blog', 'text_domain' ),
-        'archives'              => __( 'Blog Archives', 'text_domain' ),
-        'attributes'            => __( 'Blog Attributes', 'text_domain' ),
-        'parent_item_colon'     => __( 'Parent Blog:', 'text_domain' ),
-        'all_items'             => __( 'All Blogs', 'text_domain' ),
-        'add_new_item'          => __( 'Add New Blog', 'text_domain' ),
-        'add_new'               => __( 'Add New', 'text_domain' ),
-        'new_item'              => __( 'New Blog', 'text_domain' ),
-        'edit_item'             => __( 'Edit Blog', 'text_domain' ),
-        'update_item'           => __( 'Update Blog', 'text_domain' ),
-        'view_item'             => __( 'View Blog', 'text_domain' ),
-        'view_items'            => __( 'View Blogs', 'text_domain' ),
-        'search_items'          => __( 'Search Blog', 'text_domain' ),
-        'not_found'             => __( 'Not found', 'text_domain' ),
-        'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-        'featured_image'        => __( 'Featured Image', 'text_domain' ),
-        'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-        'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-        'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-        'insert_into_item'      => __( 'Insert into blog', 'text_domain' ),
-        'uploaded_to_this_item' => __( 'Uploaded to this blog', 'text_domain' ),
-        'items_list'            => __( 'Blogs list', 'text_domain' ),
-        'items_list_navigation' => __( 'Blogs list navigation', 'text_domain' ),
-        'filter_items_list'     => __( 'Filter blogs list', 'text_domain' ),
-    );
-    $args = array(
-        'label'                 => __( 'Blog', 'text_domain' ),
-        'description'           => __( 'Post Type for Blogs', 'text_domain' ),
-        'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
-        'taxonomies'            => array( 'category', 'post_tag' ),
-        'hierarchical'          => false,
-        'public'                => true,
-        'show_ui'               => true,
-        'show_in_menu'          => true,
-        'menu_position'         => 6,
-        'show_in_admin_bar'     => true,
-        'show_in_nav_menus'     => true,
-        'can_export'            => true,
-        'has_archive'           => true,
-        'exclude_from_search'   => false,
-        'publicly_queryable'    => true,
-        'capability_type'       => 'post',
-    );
-    register_post_type( 'blog', $args );
+//     $labels = array(
+//         'name'                  => _x( 'Blogs', 'Post Type General Name', 'text_domain' ),
+//         'singular_name'         => _x( 'Blog', 'Post Type Singular Name', 'text_domain' ),
+//         'menu_name'             => __( 'Blogs', 'text_domain' ),
+//         'name_admin_bar'        => __( 'Blog', 'text_domain' ),
+//         'archives'              => __( 'Blog Archives', 'text_domain' ),
+//         'attributes'            => __( 'Blog Attributes', 'text_domain' ),
+//         'parent_item_colon'     => __( 'Parent Blog:', 'text_domain' ),
+//         'all_items'             => __( 'All Blogs', 'text_domain' ),
+//         'add_new_item'          => __( 'Add New Blog', 'text_domain' ),
+//         'add_new'               => __( 'Add New', 'text_domain' ),
+//         'new_item'              => __( 'New Blog', 'text_domain' ),
+//         'edit_item'             => __( 'Edit Blog', 'text_domain' ),
+//         'update_item'           => __( 'Update Blog', 'text_domain' ),
+//         'view_item'             => __( 'View Blog', 'text_domain' ),
+//         'view_items'            => __( 'View Blogs', 'text_domain' ),
+//         'search_items'          => __( 'Search Blog', 'text_domain' ),
+//         'not_found'             => __( 'Not found', 'text_domain' ),
+//         'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+//         'featured_image'        => __( 'Featured Image', 'text_domain' ),
+//         'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+//         'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+//         'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+//         'insert_into_item'      => __( 'Insert into blog', 'text_domain' ),
+//         'uploaded_to_this_item' => __( 'Uploaded to this blog', 'text_domain' ),
+//         'items_list'            => __( 'Blogs list', 'text_domain' ),
+//         'items_list_navigation' => __( 'Blogs list navigation', 'text_domain' ),
+//         'filter_items_list'     => __( 'Filter blogs list', 'text_domain' ),
+//     );
+//     $args = array(
+//         'label'                 => __( 'Blog', 'text_domain' ),
+//         'description'           => __( 'Post Type for Blogs', 'text_domain' ),
+//         'labels'                => $labels,
+//         'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
+//         'taxonomies'            => array( 'category', 'post_tag' ),
+//         'hierarchical'          => false,
+//         'public'                => true,
+//         'show_ui'               => true,
+//         'show_in_menu'          => true,
+//         'menu_position'         => 6,
+//         'show_in_admin_bar'     => true,
+//         'show_in_nav_menus'     => true,
+//         'can_export'            => true,
+//         'has_archive'           => true,
+//         'exclude_from_search'   => false,
+//         'publicly_queryable'    => true,
+//         'capability_type'       => 'post',
+//     );
+//     register_post_type( 'blog', $args );
 
-}
-add_action( 'init', 'custom_post_type_blogs', 0 );
+// }
+// add_action( 'init', 'custom_post_type_blogs', 0 );
 
 
 function custom_post_type_resource() {

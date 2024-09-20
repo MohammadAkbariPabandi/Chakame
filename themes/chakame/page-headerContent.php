@@ -4,7 +4,7 @@ Template Name: Header Content
 */
 ?>
 
-<header>
+<header dir="rtl" style="position: absolute;right: 40%;">
   <nav class="navbar navbar-expand-lg bg-wigth ">
     <div class="container blog-Navbar">
          <a  class="navbar-brand" href="#"> 
@@ -16,14 +16,14 @@ Template Name: Header Content
       <div class="collapse navbar-collapse " id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll blog-NavbarItems" style="--bs-scroll-height: 280px;">
           <li class="nav-item mx-lg-3 ">
-              <a class="nav-link dropdown-toggle issuesPopup" href="#" role="button">hi chakame</a>
+              <a class="nav-link  " href="#" role="button">Home</a>
           </li>
           <li class="nav-item mx-lg-3">
-              <a class="nav-link dropdown-toggle resourcesPopup"  href="#" role="button">test</a>
+              <a class="nav-link  "  href="#" role="button">Contact</a>
           </li>
-          '<li class="nav-item mx-lg-3">
-            <a class="nav-link" href="#">test</a>
-          </li>'
+           <li class="nav-item mx-lg-3">
+            <a class="nav-link" href="#">About</a>
+          </li>
         </ul>
         <form class="d-flex" role="search">
         </form>
