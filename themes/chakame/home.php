@@ -101,104 +101,6 @@
       } 
     ?>
       
-       <!-- <div class="flex-slide-mobile js-collections-drawer-flex-slide-mobile" style="z-index: 9;"> -->
-            <!-- <div class="flex-title-mobile "> -->
-              <!-- <div class="flex-title-mobile-subject"> -->
-                 <!-- <h4>Ark</h4> -->
-              <!-- </div> -->
-              <!-- <div class="flex-title-mobile-description" >
-                <p>A Tribute To The Twin Towers And — The Architecture Of Our Home City</p>
-              </div> -->
-            <!-- </div>   -->
-            <!-- <div class="flex-title-mobile-image"> -->
-              <!-- <img src="{{ 'keepintouch04.jpg' | asset_url }}" alt="">
-            </div> -->
-        <!-- </div> -->
-
-        <!--  <div class="flex-slide-mobile js-collections-drawer-flex-slide-mobile" style="z-index: 8;">
-            <div class="flex-title-mobile">
-              <div class="flex-title-mobile-subject">
-                 <h4>Manhattan</h4>
-              </div>
-             <div class="flex-title-mobile-description" >
-                <p >A Tribute To The Twin Towers And — The Architecture Of Our Home City</p>
-              </div>
-            </div>          
-            <div class="flex-title-mobile-image">
-              <img src="{{ '2.webp' | asset_url }}" alt="">
-            </div>
-        </div>
-      
-        <div class="flex-slide-mobile js-collections-drawer-flex-slide-mobile" style="z-index: 7;">
-            <div class="flex-title-mobile ">
-              <div class="flex-title-mobile-subject">
-                 <h4>Mélange</h4>
-              </div>
-              <div class="flex-title-mobile-description" >
-                <p >A Tribute To The Twin Towers And — The Architecture Of Our Home City</p>
-              </div>
-            </div>          
-            <div class="flex-title-mobile-image">
-              <img src="{{ 'collection01.png' | asset_url }}" alt="">
-            </div>
-        </div>
-      
-        <div class="flex-slide-mobile js-collections-drawer-flex-slide-mobile" style="z-index: 6;">
-            <div class="flex-title-mobile ">
-              <div class="flex-title-mobile-subject">
-                 <h4>Gossip</h4>
-              </div>
-              <div class="flex-title-mobile-description" >
-                <p >A Tribute To The Twin Towers And — The Architecture Of Our Home City</p>
-              </div>
-            </div>          
-            <div class="flex-title-mobile-image">
-              <img src="{{ '8.webp' | asset_url }}" alt="">
-            </div>
-        </div>
-      
-        <div class="flex-slide-mobile js-collections-drawer-flex-slide-mobile" style="z-index: 5;">
-            <div class="flex-title-mobile ">
-              <div class="flex-title-mobile-subject" >
-                 <h4>Rock N Roll</h4>
-              </div>
-              <div class="flex-title-mobile-description" >
-                <p >A Tribute To The Twin Towers And — The Architecture Of Our Home City</p>
-              </div>
-            </div>          
-            <div class="flex-title-mobile-image">
-              <img src="{{ '1.webp' | asset_url }}" alt="">
-            </div>
-        </div>
-      
-        <div class="flex-slide-mobile js-collections-drawer-flex-slide-mobile" style="z-index: 4;">
-            <div class="flex-title-mobile ">
-              <div class="flex-title-mobile-subject">
-                 <h4>Rainforest</h4>
-              </div>
-              <div class="flex-title-mobile-description" >
-                <p >A Tribute To The Twin Towers And — The Architecture Of Our Home City</p>
-              </div>
-            </div>          
-            <div class="flex-title-mobile-image">
-              <img src="{{ '5.webp' | asset_url }}" alt="">
-            </div>
-        </div> -->
-      
-        <!-- <div class="flex-slide-mobile js-collections-drawer-flex-slide-mobile" style="z-index: 3;">
-            <div class="flex-title-mobile ">
-              <div class="flex-title-mobile-subject">
-                 <h4>Mischief</h4>
-              </div>
-              <div class="flex-title-mobile-description" >
-                <p >A Tribute To The Twin Towers And — The Architecture Of Our Home City</p>
-              </div>
-            </div>          
-            <div class="flex-title-mobile-image">
-              <img src="{{ 'face.png' | asset_url }}" alt="">
-            </div>
-        </div> -->
-      
     </div>
   
 </section>
@@ -224,6 +126,9 @@
                 array(
                     'post_type' => 'resource', // Change to 'page' if you want pages instead
                     'post_status' => 'publish',
+                    'meta_key' => '_wp_page_template',
+                    'meta_value' => 'default',
+                    // 'name' => 'Default template',
                     'numberposts' => -1, // Retrieve 2 posts
                 )
             );
@@ -253,87 +158,13 @@
                 } 
             } 
             ?>
-            <!-- <div class="card col-md-4 ">
-              <div class="homeproject__card"> -->
-                <!-- <img src = "<?php echo get_template_directory_uri().'/assets/images/h.png';?>"> -->
-                <!-- <div class="card-body"> -->
-<!--                   
-                  <p class="card-text">.فندک کو، فندک نیست، دستت بود، دستت نیست . چطوری گل و روشن کری؟ مغزم رید</p>
-                  <a href="#" class="btn btn-primary">اطلاعات بیشتر</a>
-                </div>
-              </div>
-            </div> -->
+
            
         </div>
         
       </div>
 
 
-
-
-
-
-
-
-
-      <!-- <div class="photo__gallery">
-
-          <div class="column">
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/6.jpg';?>">
-                <h5>سلام</h5>
-              </div>
-            </div>
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/g2.jpg';?>">
-              </div>
-            </div>
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/1.jpg';?>">
-              </div>
-            </div>
-          </div>  
-           
-          <div class="column">
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/g1.jpg';?>">
-              </div>
-            </div>
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/6.jpg';?>">
-              </div>
-            </div>
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/g3.jpg';?>">
-              </div>
-            </div>
-          </div>  
-
-          <div class="column">
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/2.jpg';?>">
-              </div>
-            </div>
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/5.jpg';?>">
-              </div>
-            </div>
-            <div class="photo">
-              <div class="photo__content">
-                <img src = "<?php echo get_template_directory_uri().'/assets/images/2.jpg';?>">
-              </div>
-            </div>
-          </div>  
-
-      </div> -->
 </section>
 
 

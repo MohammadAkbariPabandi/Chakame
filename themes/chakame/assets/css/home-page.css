@@ -338,6 +338,14 @@ backdrop-filter: blur(4.3px);
   height: 250px;
 }
 
+.homeproject__card .btn{
+  background-color: rgb(82 116 122 / 100%);
+  border: none;
+}
+.homeproject__card .btn:hover{
+  transform: scale(1.07);
+}
+
 .homeproject__card a{
  font-family: chimo;
 }
