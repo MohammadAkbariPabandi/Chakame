@@ -1,7 +1,7 @@
 /* Home Page */
 
 .homeheader{
-  background-image: url(../images/SiteTitleImage.png);
+  background-image: url(../images/h.png);
   background-size: cover;
   background-repeat: no-repeat;
   /* position: absolute;
@@ -10,7 +10,21 @@
   width: 100%;
   height: 100vh;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.homeheader img{
+  width: 18%;
+  height: 27%;
+/* From https://css.glass */
+background: rgba(40, 40, 39, 0.64);
+border-radius: 100%;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.9px);
+-webkit-backdrop-filter: blur(1.9px);
+border: 1px solid rgba(40, 40, 39, 0.3);
 }
 
 .homeheader__body{
@@ -30,7 +44,15 @@
 .homeheader__content{
 
 }
-
+.sectionSlider__slid_card{
+  background-color: rgb(82 116 122 / 100%);
+}
+.flex-slide{
+  background-color: rgb(82 116 122 / 100%);
+}
+.flex-title{
+  background-color: rgb(82 116 122 / 100%);
+}
 
 .flex-slide_card_category{
   color: var(--global-color-black);
@@ -130,7 +152,7 @@
 
 .flex-title {
   color : var(--global-color-lightBrown);
-  background-color: white;
+  /* background-color: white; */
   position: absolute;
   top: 0;
   left: 0;

@@ -1,34 +1,28 @@
+.chimoHeader{
+    position: absolute;
+    width: 100%;
+}
 
 .navbar{
-    height: 60px;
+/* From https://css.glass */
+background: rgba(40, 40, 39, 0.64);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.9px);
+-webkit-backdrop-filter: blur(1.9px);
+border: 1px solid rgba(40, 40, 39, 0.3);
+}
+.navbar img{
+    width: 150px;
+    height: 100px;
+}
 
+.navbar-collapse{
+    padding-block: 12px;
 }
-.collapse{
-    justify-content: center;
-}
-.navbar-nav{
-    display: contents;
-}
-.nav-link{
-    font-size: larger;
+
+.navbar-collapse a{
+    font-size: 18px;
     font-weight: bold;
-    color: white;
+    color: black;
 }
-
-
-
-/* responsive------------------------------------------------- */
-
-@media only screen and (max-width: 600px) {
-
-    .blog-Navbar {
-        padding: 30px !important;
-        background-color: var(--White);
-    }
-  
-    .navbar-nav .dropdown-menu{
-      width: 300px;
-    }
-}
-  
-  
