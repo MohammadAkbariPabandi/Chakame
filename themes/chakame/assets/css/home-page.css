@@ -54,11 +54,11 @@
 .flex-slide_card_category{
   color: var(--White);
   font-family: chimo;
-  font-size: 14px;
+  /* font-size: 14px; */
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  letter-spacing: 5.6px;
+  /* letter-spacing: 5.6px; */
 }
 
 .collection{
@@ -103,6 +103,9 @@
   margin-bottom: 0;
 }
 
+#home-flex-container-mobile{
+  display: none;
+}
 /*  -----------------------------------------------start => collection-flwx-card-slide-Desktop ------------------------------------------------------ */
 
 .flex-container {
@@ -305,12 +308,51 @@
 
 .homeprojects__title{
   margin-bottom: 50px;
+
 }
 .homeprojects__title h4{
   font-family: chimo;
+  color: black;
+  font-size: 34px;
 }
 
-.photo__gallery{
+
+.card{
+  border: none;
+}
+.homeproject__card{
+  height: 460px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(190 190 190);
+  border-radius: 16px;
+/* From https://css.glass */
+background: rgba(82, 116, 122, 0.26);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.3px);
+-webkit-backdrop-filter: blur(4.3px);
+}
+.homeproject__card img{
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  height: 250px;
+}
+
+.homeproject__card a{
+ font-family: chimo;
+}
+
+.homeproject__card .card-title{
+  font-family: chimo;
+  height: 40px;
+ }
+ .homeproject__card .card-text{
+  font-family: chimo;
+  height: 72px;
+  overflow-y: auto;
+ }
+
+/* .photo__gallery{
   display: flex;
   gap: 20px;
   padding-inline: 40px;
@@ -359,7 +401,7 @@
 
 .photo img:hover .photo__content h5{
   visibility: visible !important;
-}
+} */
 
 
 /* mobile   */

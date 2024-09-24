@@ -213,7 +213,70 @@
       <div class="container homeprojects__title">
           <h4>پروژه ها</h4>
       </div>
-      <div class="photo__gallery">
+      <div class="container">
+        <div class="row">
+            <?php
+            // Include WordPress core files
+            require_once ('wp-load.php');
+
+            // Get all published posts
+            $Projects = get_posts(
+                array(
+                    'post_type' => 'resource', // Change to 'page' if you want pages instead
+                    'post_status' => 'publish',
+                    'numberposts' => -1, // Retrieve 2 posts
+                )
+            );
+
+            if ($Projects) {
+                foreach ($Projects as $recentPost) {
+                     $hero = get_field('hero', $recentPost->ID);
+                      echo '<div class="card col-md-4 ">';
+                      echo '<div class="homeproject__card">';
+                      if($hero) {
+                          echo '<img src="' . $hero['url'] . '">';
+                      }
+                      echo '<div class="card-body">';
+                      if($recentPost->post_title) {
+                        echo '<h5 class="card-title">'. esc_html($recentPost->post_title) .'</h5>';
+                      }
+                    
+                      $Projectsummary = get_field('summary' , $recentPost->ID); // Get the value of the 'summary' custom field               
+                      if (!empty($Projectsummary)) {
+                          echo '<p class="card-text">'.$Projectsummary.'</p>';
+                      }
+
+                      echo '<a href="'. get_permalink($recentPost).'" class="btn btn-primary">اطلاعات بیشتر</a>';
+                      echo '</div>';
+                      echo '</div>';
+                      echo '</div>';
+                } 
+            } 
+            ?>
+            <!-- <div class="card col-md-4 ">
+              <div class="homeproject__card"> -->
+                <!-- <img src = "<?php echo get_template_directory_uri().'/assets/images/h.png';?>"> -->
+                <!-- <div class="card-body"> -->
+<!--                   
+                  <p class="card-text">.فندک کو، فندک نیست، دستت بود، دستت نیست . چطوری گل و روشن کری؟ مغزم رید</p>
+                  <a href="#" class="btn btn-primary">اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div> -->
+           
+        </div>
+        
+      </div>
+
+
+
+
+
+
+
+
+
+      <!-- <div class="photo__gallery">
 
           <div class="column">
             <div class="photo">
@@ -270,7 +333,7 @@
             </div>
           </div>  
 
-      </div>
+      </div> -->
 </section>
 
 
