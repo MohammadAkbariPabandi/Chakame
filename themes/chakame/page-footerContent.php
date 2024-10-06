@@ -12,15 +12,17 @@ Template Name: Footer Content
         <div class="container footerUp">
             <div class="row footerUp__info">
                 <div class="col-md-5 col-12 footerUp__FirstColumn">
-                    <img src = "<?php echo get_template_directory_uri().'/assets/icons/chimoLogo.png';?>">
+                    <a href="/index.php">
+                        <img src = "<?php echo get_template_directory_uri().'/assets/icons/chimoLogo.png';?>">
+                    </a> 
                 </div>
                 <div class="col-md-3 col-6 footerUp__SecondColumn">
                     <h6 class="text-white mb-4">
                         <?php echo get_ACF_by_filed_for_page('footer_site_map_title' , 'Sitemap' , 'page-footerContent.php' );?> 
                     </h6>
                     <div class = "footerUp__SecondColumn_links">
-                         <a class="text-white" href="">درباره ما</a>
-                         <a class="text-white" href="">ارتباط با ما</a>
+                         <a class="text-white" href="/about/">درباره ما</a>
+                         <a class="text-white" href="/contact/">ارتباط با ما</a>
                     </div>
                 </div>
                 <div class="col-md-4 col-6 footerUp__TherdColumn">

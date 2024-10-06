@@ -6,8 +6,10 @@ Template Name: Header Content
 <header class="chimoHeader" dir="rtl">
       <nav class="navbar navbar-expand-md navbar-dark">
         <a class="navbar-brand" href="#">
-        <div class="chimoLogo">
-           <img src = "<?php echo get_template_directory_uri().'/assets/icons/chimoLogo.png';?>">
+        <div >
+          <a class="chimoLogo" href="/index.php/">
+            <img src = "<?php echo get_template_directory_uri().'/assets/icons/chimoLogo.png';?>">
+          </a>  
         </div>
         </a>
 
@@ -20,13 +22,13 @@ Template Name: Header Content
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">خانه</a>
+              <a class="nav-link" href="/index.php/">خانه</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">درباره ما</a>
+              <a class="nav-link" href="/about/">درباره ما</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ارتباط با ما</a>
+              <a class="nav-link" href="/contact/">ارتباط با ما</a>
             </li>
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
