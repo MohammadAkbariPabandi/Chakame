@@ -132,11 +132,13 @@
                     'numberposts' => -1, // Retrieve 2 posts
                 )
             );
-
+            echo '<div class="swiper mySwiper">';
+            echo '<div class="swiper-wrapper">';
             if ($Projects) {
                 foreach ($Projects as $recentPost) {
                      $hero = get_field('hero', $recentPost->ID);
-                      echo '<div class="card col-md-4 ">';
+                      
+                      echo '<div class="card col-md-4 swiper-slide">';
                       echo '<div class="homeproject__card">';
                       if($hero) {
                           echo '<img src="' . $hero['url'] . '">';
@@ -155,8 +157,13 @@
                       echo '</div>';
                       echo '</div>';
                       echo '</div>';
+
+
                 } 
             } 
+            echo '</div>';
+            echo '<div class="swiper-pagination"></div>';
+            echo '</div>';
             ?>
 
            

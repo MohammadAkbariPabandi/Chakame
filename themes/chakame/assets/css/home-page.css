@@ -321,16 +321,16 @@
   border: none;
 }
 .homeproject__card{
-  height: 460px;
-  margin-bottom: 20px;
+  /* height: 460px; */
+  margin-bottom: 40px;
   border: 1px solid rgb(190 190 190);
   border-radius: 16px;
-/* From https://css.glass */
-background: rgba(82, 116, 122, 0.26);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.3px);
--webkit-backdrop-filter: blur(4.3px);
+  /* From https://css.glass */
+  background: rgba(82, 116, 122, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
 }
 .homeproject__card img{
   width: 100%;
@@ -382,7 +382,7 @@ backdrop-filter: blur(4.3px);
   right: 30px;
   color: white;
   /* visibility: hidden; */
-}
+
 
 .photo{
 
@@ -545,4 +545,26 @@ backdrop-filter: blur(4.3px);
     display : flex;
     }
   
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
 }
