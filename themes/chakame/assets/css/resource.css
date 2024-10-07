@@ -19,13 +19,27 @@
 .resourceContent h5,
 .resourceContent h6{
     margin-bottom: 40px;
+    font-family: chimo;
+    color: black;
+    font-size: 36px;
 }
 
 .resourceContent p{
    font-family: chimo;
+   color: black;
+   text-align: justify;
 }
 
-.resourceParent__childe{
-    margin-block: 100px;
 
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    .resourceHeader{
+        height: unset;
+    }
+    .resourceContent{
+        margin-block: 30px;
+        padding-inline: 30px;
+    }
 }
+  
